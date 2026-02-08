@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO PWA</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>TODO список</h1>
+
+<div class="todo-container">
+    <input type="text" id="taskInput" placeholder="Введите задачу">
+    <button id="addBtn">Добавить</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script src="app.js"></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('serviceworker.js');
+    }
+</script>
+
+</body>
+</html>
